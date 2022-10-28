@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',"sans-serif";
+}
+
+
+.overlay{
+    background-color: rgb(247, 166, 214);
+    mix-blend-mode: overlay;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: -1;
+}
+
+#abc{
+    color: rgb(133, 26, 221);
+    font-size: xx-large;
+    margin-left: 37%;
+    position:relative;
+    padding-bottom: 8%;
+    padding-top: 3%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-text-decoration: rgb(255, 105, 138) double underline;
+    text-decoration: hotpink double underline;
+}
+
+
+.section1{
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+/* .caption{
+    border: "3px";
+    border-color: brown;
+    border-radius: 40px;
+
+} */
+#name{
+    border-radius: 40px;
+
+}
+
+.inputs{
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 1%;
+}
+
+.quant1{
+    border-radius: 40px;
+    border-color: deeppink;
+    background-color: rgb(255, 191, 226);
+    text-align: center;
+    margin-right: 24.5%;
+}
+
+.quant2{
+    border-radius: 40px;
+    border-color: deeppink;
+    background-color: rgb(255, 191, 226);
+    text-align: center;
+    margin-right: 27.1%;
+}
+.quant3{
+    border-radius: 40px;
+    border-color: deeppink;
+    background-color: rgb(255, 191, 226);
+    text-align: center;
+}
+.output{
+    margin-top: 5%;
+    margin-left: 3%;
+}
+.button1{
+    padding: 5px;
+    padding-left: 15px;
+    padding-right :15px;
+    border-radius: 10px;
+    border-color: blueviolet;
+}
+#tot{
+    border-radius: 10px;
+    border-color: deeppink;
+    background-color: rgb(255, 191, 226);
+    text-align: center;
+}
+
+.bgimage{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: -1;
+}

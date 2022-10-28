@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="wb.css">
+    <title>Welcome to Food street</title>
+    <p id = "abc">CONTINENTAL CUISINE</p>
+    <script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+	<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+    <script>
+        function add()
+        {
+            var a = parseInt(document.getElementById('quant1').value);
+            var b = parseInt(document.getElementById('quant2').value);
+            var c = parseInt(document.getElementById('quant3').value);
+            var add1 = document.getElementById('tot').value = (a*300+b*200+c*200);
+            var pass = parseInt(document.getElementById('tot').value = add1);
+        }
+    </script>
+</head>
+<body bg color = "lightpurple">
+    <img src = "background.jpg" class = "bgimage">
+    <section class = "section1">
+        <div id="container1"></div>
+        <div id="container2"></div>
+        <div id="container3"></div>
+    <div class = "overlay">
+    </div>
+    </section>
+    
+    <!-- CONTAINER 1 -->
+    <script type="text/babel">
+        class ResImage extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <img src={this.props.src} class = "center" height = {200}></img>
+                    </div>
+                );
+            }
+        }
+        class ResCaption extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <p id ="name" style = {{paddingRight:"15px",paddingLeft:"15px",backgroundColor:"lavender",display:"inline-block"}}>{this.props.caption}</p> 
+                    </div>);
+            }
+        }
+        class Price extends React.Component{
+            render(){
+                return(
+                    <div style ={{color :"red"}} >
+                        <p style = {{paddingbottom:"1%"}}>{this.props.cost}</p>
+                    </div>);
+            }
+        }
+        class SrchResult extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <ResImage {...this.props}/>
+                        <ResCaption {...this.props}/>
+                        <Price {...this.props}/>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(
+            <div class = "pizza">
+                <SrchResult src="pizza.jpeg"  caption="Margherita" cost = "Price = 300 INR"/>               
+            </div>,
+            
+            document.querySelector("#container1")
+        );
+    </script>
+
+    <!-- CONTAINER 2 -->
+    <script type="text/babel">
+        class ResImage extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <img src={this.props.src} class = "center" height = {200}></img>
+                    </div>
+                );
+            }
+        }
+        class ResCaption extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <p id ="name" style = {{padding:"0.5%",paddingRight:"3%",paddingLeft:"3%",backgroundColor:"lavender",display:"inline-block"}}>{this.props.caption}</p> 
+                    </div> );
+            }
+        }
+        class Price extends React.Component{
+            render(){
+                return(
+                    <div style ={{color :"red"}} >
+                        <p style = {{paddingbottom:"1%"}}>{this.props.cost}</p>
+                    </div>);
+            }
+        }
+        class SrchResult extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <ResImage {...this.props}/>
+                        <ResCaption {...this.props}/>
+                        <Price {...this.props}/>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <SrchResult src="Lasagna.jpg"  caption="Lasagna" cost = "Price = 200 INR" />               
+            </div>,
+            
+            document.querySelector("#container2")
+        );
+    </script>
+
+    <!-- CONTAINER 3 -->
+    <script type="text/babel">
+        class ResImage extends React.Component {
+            render() { 
+                return (
+                    <div>
+                        <img src={this.props.src} class = "center" height = {200}></img>
+                    </div>
+                );
+            }
+        }
+        class ResCaption extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <p id ="name" style = {{padding:"0.5%",paddingRight:"3%",paddingLeft:"3%",backgroundColor:"lavender",display:"inline-block",borderradius:"1%",}}>{this.props.caption}</p> 
+                    </div> );
+            }
+        }
+        class Price extends React.Component{
+            render(){
+                return(
+                    <div style ={{color :"red"}} >
+                        <p style = {{paddingbottom:"1%"}}>{this.props.cost}</p>
+                    </div>);
+            }
+        }
+        class SrchResult extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <ResImage {...this.props}/>
+                        <ResCaption {...this.props}/>
+                        <Price {...this.props}/>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <SrchResult src = "burger.jpg" caption = "Burger" cost = "Price = 200 INR"/>               
+            </div>,
+            
+            document.querySelector("#container3")
+        );
+    </script>
+
+    <div class = "inputs">
+        
+            <input type = "text" class = "quant1" placeholder = "Enter Quantity" id = "quant1" value = "0" />
+        
+            <input type = "text"  class = "quant2" placeholder = "Enter Quantity" id = "quant2" value = "0" />
+
+            <input type = "text" class = "quant3" placeholder = "Enter Quantity" id = "quant3" value = "0" />
+    </div>
+
+    <div class = "output">
+        <input type ="text" id = "tot" placeholder="Display total here" value = "0" disabled = "true">
+        <button type="button" class = "button1" onclick="add();">Total</button>
+    </div>
+</body>
+</html>
